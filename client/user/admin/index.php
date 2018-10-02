@@ -60,32 +60,36 @@ while(i<jumlah_prov)
             $.ajax({
                 type:'GET',
                 url:'../../../server/proses/postkabupaten.php?provinsi='+provinsi,
-                // data:'provinsi='+provinsi,
                 success:function(html){
-                    // alert(html);
-                    
-                    // hallo = html.split('],[');
-                    // console.log(hallo[0].substr(0,hallo[0].length-2).split(','));
-                    
-                    // console.log(hallo.length);
-                    // var i=0;
-                    // var arr = []        ;
-                    // while(i<hallo.length){
-                    //     arr[i] = hallo[i].substr(0,hallo[i].length-2).split(',');
-                    //     i++;
-                    // }
-                    // console.log(arr);
-                    markerprov(html);
+                    alert(html);
+                    data=html.split('|');
+                    markerprov(data[0]);
+                    jumlah_kab=data.length;
+                    alert(jumlah_kab);     
+                    // $('#kabupaten').html('<option value="'+data+'">'+data+'</option>'); 
+                    var hapus = document.getElementById("kabupaten");
+                    $('#kabupaten').children().remove().end();
                    
-
-                    // var polygon = L.polygon(arr).addTo(mymap);
-                    $('#kabupaten').html(html);
-                    $('#kabupaten').html('<option value="">- Pertama Pilih Provinsi -</option>'); 
+                    i=1;
+                      while(i<=jumlah_kab-2)
+                      {
+                        
+                        // alert(i);
+                        var x1 = document.getElementById("kabupaten");
+                        var option1 = document.createElement("option");
+                        option1.text = data[i];
+                        option1.value = data[i];
+                        x1.add(option1);
+  
+                        i++;
+                      }
+                      
+                    
                 }
                
             }); 
         }else{
-            $('#kabupaten').html('<option value="">- tidak ditemukan -</option>');   
+            // $('#kabupaten').html('<option value="">- tidak ditemukan -</option>');   
         }
     });
     
