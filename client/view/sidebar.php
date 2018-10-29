@@ -12,14 +12,32 @@
             <span>Pages</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+            <h6 class="dropdown-header">Administrasi</h6>
+            <a onclick="tampil_jorong()" class="dropdown-item" href="#">Jorong</a>
+            <a onclick="tampil_nagari()" class="dropdown-item" href="#">Nagari</a>
+            <a class="dropdown-item" onclick="tampil_hutan()" href="#">Hutan</a>
+            <a class="dropdown-item" onclick="tampil_bangunan()" href="#">Bangunan</a>
+            <a class="dropdown-item" onclick="tampil_jalan()" href="#">Jalan</a>
+            <a class="dropdown-item" onclick="tampil_sawah()" href="#">Sawah</a>
+           
+            <a class="dropdown-item" onclick="tampil_sungai()" href="#">Sungai</a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
+            <h6 class="dropdown-header">Bangunan:</h6>
+            <a class="dropdown-item" onclick="tampil_rumah_kg()" href="#">Rumah Berisi</a>
+            <a class="dropdown-item" onclick="tampil_rumah_kosong_kg()"href="#">Rumah Kosong</a>
+            <a class="dropdown-item" onclick="tampil_bukan_rumah_kg()" href="#">Bukan Rumah</a>
+            <a class="dropdown-item" onclick="tampil_allrumah()" href="#">Semua Bangunan</a>
+            <a class="dropdown-item" onclick="tampil_industri()" href="#">Bangunan Industri</a>
+            
+
+             <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Ekonomi:</h6>
+            <a class="dropdown-item" onclick='tabungan()' href="#">Tabungan</a>
+            <a class="dropdown-item" onclick='asuransi()' href="#">Asuransi</a>
+
+            
+           
+            
           </div>
         </li>
         <li class="nav-item">

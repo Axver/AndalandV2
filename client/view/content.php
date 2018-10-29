@@ -2,6 +2,9 @@
 <!-- Script JS Menu-->
 
 
+
+
+
 <div id="content-wrapper">
 
 <div class="container-fluid">
@@ -22,12 +25,52 @@
 
        <div class="row">
            <div class="col-sm-5">
-           <button class="btn btn-info" onclick="lokasi()">Lokasi</button>
-           <button class="btn btn-info">Menu 1</button>
-           <button class="btn btn-info">Menu 1</button>
-           <button class="btn btn-info">Menu 1</button>
-           <button class="btn btn-warning">Menu 1</button>
+           <div class='row'>
+            <div class='col sm-4'>
+            <select class='form-control'>
+           <option>
+           Salayan
+           </option>
+           <option>
+           Piliang
+           </option>
+           <option>
+           Chaniago
+           </option>
+           <option>
+           Jambak
+           </option>
+           <option>
+           Simabua
+           </option>
+           <option>
+           Melayu Deli
+           </option>
+           <option>
+           Sikumbang
+           </option>
+           <option>
+           Koto
+           </option>
+           <option>
+           Salayan
+           </option>
+           <option>
+           Guci
+           </option>
+           <option>
+           Tanjuang
+           </option>
+           <option>
+           Sikumbang Sariak
+           </option>
+           
+           </select>
 
+           
+            </div>
+           </div>
+           <button class="btn btn-info" onclick="lokasi()">Lokasi</button>
            </div>
 
             <div class="col-sm-7">
@@ -121,6 +164,8 @@ function markerprov(html)
 
   mymap.setView(new L.LatLng(test[1], test[0]), 12);
 }
+
+
 
   </script>
 
